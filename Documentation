@@ -1,0 +1,66 @@
+GET - http://localhost:5000/product
+	-get all products in our DB
+
+POST - http://localhost:5000/product
+	body:
+	{
+		"name": "Anchor 400g",
+	  	"description": "milk powder",
+	  	"price":450.00 ,
+	  	"discount": 0,
+		"qty":100,
+		"margin":5
+	}
+	
+	add new product to the DB
+	
+GET - http://localhost:5000/product/:p_id
+	-get one product details on given product id
+
+PUT - http://localhost:5000/product/:p_id
+	-update product of given product id
+	
+DELETE - http://localhost:5000/product/:p_id
+	-delete product of given id
+
+POST - http://localhost:5000/order/place_order
+	body:
+	{
+		"name":"Jayatharan",
+		"phoneNo":"0776578500",
+		"address":"259, 2nd Lane, Ukkulankulam, Vavuniya",
+		"orderItems":[
+			{
+				"id":"60f0470f33dd61ecc5c6500d",
+				"qty":10
+			},
+			{
+				"id":"60f0477833dd61ecc5c6500f",
+				"qty":2
+			}
+			]
+	}
+	-place a new order
+
+GET - http://localhost:5000/order/new_order
+	- get all new orders
+
+GET - http://localhost:5000/order/completed_order
+	- get all completed orders
+
+GET - http://localhost:5000/order/complete/:o_id
+	-complete the given id order
+
+GET - http://localhost:5000/transaction
+	- get all transaction details (account details)
+
+POST - http://localhost:5000/transaction
+	body:
+	{
+		"p_id":"",
+		"o_id":"",
+		"reason":"Test Trasaction",
+		"amount":0.00
+	}
+	
+	- add new transaction to the DB
