@@ -18,6 +18,15 @@ GET - http://localhost:5000/product/:p_id
 	-get one product details on given product id
 
 PUT - http://localhost:5000/product/:p_id
+	body:
+	{
+		"name": "Anchor 400g",
+	  	"description": "milk powder",
+	  	"price":450.00 ,
+	  	"discount": 0,
+		"qty":100,
+		"margin":5
+	}
 	-update product of given product id
 	
 DELETE - http://localhost:5000/product/:p_id
